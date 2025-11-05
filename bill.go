@@ -46,6 +46,5 @@ func (b *Bill) addItem(name string, price float64) {
 
 func (b *Bill) saveBill(){
 	data := []byte(b.format())
-
 	os.WriteFile("bill/"+b.name+".txt", data, 0644)
 }
